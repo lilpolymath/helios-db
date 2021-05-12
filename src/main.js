@@ -13,10 +13,10 @@ app.get(`/students`, async (req, res) => {
 });
 
 app.post(`/student`, async (req, res) => {
-  const { fullname } = req.body;
+  const data = req.body;
   const result = await prisma.student.create({
     data: {
-      fullname: fullname,
+      ...data,
     },
   });
   res.json(result);

@@ -11,7 +11,6 @@ datasource db {
 model Student {
   id       Int    @default(autoincrement()) @id
   fullname String
-  likes    Int
   csc472   Int
   csc431   Int
   csc451   Int
