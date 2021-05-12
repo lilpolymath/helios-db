@@ -7,5 +7,4 @@ CREATE TABLE "public"."Student" (
   csc451 INTEGER NOT NULL,
   csc333 INTEGER NOT NULL,
   csc334 INTEGER NOT NULL,
-  UNIQUE (slug)
 );

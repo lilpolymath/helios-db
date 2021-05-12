@@ -12,6 +12,16 @@ app.get(`/students`, async (req, res) => {
   console.log(res.json(result));
 });
 
+app.post(`/student`, async (req, res) => {
+  const data = req.body;
+  const result = await prisma.student.create({
+    data: {
+      ...data,
+    },
+  });
+  res.json(result);
+});
+
 app.delete(`/student/:id`, async (req, res) => {
   const { id } = req.params;
   const result = await prisma.student.delete({

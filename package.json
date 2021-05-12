@@ -11,7 +11,7 @@
     "@prisma/cli": "2.6.2"
   },
   "scripts": {
-    "dev": "node ./src/main.js",
+    "dev": "nodemon ./src/main.js",
     "db": "node ./script.js"
   },
   "engines": {
