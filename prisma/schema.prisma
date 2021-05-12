@@ -1,0 +1,19 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["atomicNumberOperations"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Student {
+  id    Int    @default(autoincrement()) @id
+  fullname  String?
+  csc472 Int
+  csc431 Int
+  csc451 Int
+  csc333 Int
+  csc334 Int
+}
