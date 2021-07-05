@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 app.get(`/students`, async (req, res) => {
   const result = await prisma.student.findMany();
-  console.log(res.json(result));
+  res.json(result);
 });
 
 app.post(`/student`, async (req, res) => {
@@ -30,8 +30,8 @@ app.delete(`/student/:id`, async (req, res) => {
   res.json(result);
 });
 
-app.get(`/post/:id`, async (req, res) => {
-  const { slug } = req.params;
+app.get(`/student/:id`, async (req, res) => {
+  const { id } = req.params;
   const result = await prisma.student.findOne({
     where: { id: parseInt(id) },
   });
